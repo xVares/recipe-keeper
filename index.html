@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Keeper</title>
+    <link rel="stylesheet" href="./styles/dark-mode.css" id="theme-link">
+</head>
+
+<body>
+    <h1>Recipe Keeper</h1>
+    <button id="style-switcher" type="button">Switch Style</button>
+
+    <h2 id="form-header">Add Recipe</h2>
+    <!-- Form for adding Recipes -->
+    <form id="recipe-form">
+        <!-- Hidden input element for the recipe id to make api request -->
+        <input type="hidden" id="recipe-id" name="recipe-id" value="">
+
+        <label for="recipe-form-name">Recipe Name</label>
+        <input id="recipe-form-name" name="recipe-form-name" type="text" placeholder="Name of your recipe" required>
+
+        <label for="recipe-form-ingredients">Ingredients</label>
+        <textarea id="recipe-form-ingredients" name="recipe-form-ingredients"
+            placeholder="List ingredients separated by commas" required></textarea>
+
+        <label for="recipe-form-steps">Steps for Preparation</label>
+        <textarea id="recipe-form-steps" name="recipe-form-steps" placeholder="Steps for preparation"
+            required></textarea>
+
+        <label for="recipe-form-img">Recipe Image URL:</label>
+        <input type="url" id="recipe-form-img" name="recipe-form-img" placeholder="http://example.com/my-dish.jpg">
+
+        <button type="submit" id="submit-button">Add Recipe</button>
+    </form>
+
+    <!-- Recipe Display Area -->
+    <h2>Your Recipes</h2>
+    <div id="display-area"></div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
